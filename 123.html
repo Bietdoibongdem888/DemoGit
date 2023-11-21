@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #navbar {
+            position: relative;
+        }
+
+        .logo1 {
+            position: absolute;
+            top: 500px; /* Vị trí ban đầu của biểu tượng, bạn có thể điều chỉnh giá trị này */
+            left: 600px; /* Vị trí ban đầu của biểu tượng, bạn có thể điều chỉnh giá trị này */
+            transition: top 0.5s, left 0.5s, transform 0.5s; /* Thêm hiệu ứng chuyển động và thay đổi kích thước */
+        }
+
+        .logo1 img {
+            width: 50px; /* Kích thước ban đầu của biểu tượng, bạn có thể điều chỉnh giá trị này */
+            height: auto; /* Đảm bảo tỷ lệ khung hình được giữ nguyên */
+        }
+    </style>
+</head>
+<body>
+<nav id="navbar">
+    <div class="logo1" onclick="moveIcon()">
+        <a href="index1.html"><img src="file:///C:/Users/Dang%20Duong%20PC/Downloads/admin.png" alt="logo1"></a>
+    </div>
+</nav>
+
+<script>
+    function moveIcon() {
+        var logo = document.querySelector('.logo1');
+        var currentTop = parseFloat(getComputedStyle(logo).top);
+        var currentLeft = parseFloat(getComputedStyle(logo).left);
+
+        // Thay đổi vị trí của biểu tượng
+        logo.style.top = (currentTop + 10) + 'px'; // Bạn có thể điều chỉnh giá trị 10 thành giá trị mong muốn
+        logo.style.left = (currentLeft + 10) + 'px'; // Bạn có thể điều chỉnh giá trị 10 thành giá trị mong muốn
+
+        // Thay đổi kích thước của biểu tượng
+        var currentWidth = parseFloat(getComputedStyle(logo.querySelector('img')).width);
+        logo.querySelector('img').style.width = (currentWidth + 10) + 'px'; // Bạn có thể điều chỉnh giá trị 10 thành giá trị mong muốn
+    }
+</script>
+
+</body>
+</html>
