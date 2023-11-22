@@ -1,48 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        #navbar {
-            position: relative;
-        }
+<style>
+/* Định nghĩa kiểu cho phần tử admin */
+.admin {
+  position: relative; /* Cho phép dịch chuyển phần tử theo vị trí tương đối */
+  width: 100px; /* Chiều rộng của phần tử */
+  height: 50px; /* Chiều cao của phần tử */
+  background-color: grey; /* Màu nền của phần tử */
+  color: white; /* Màu chữ của phần tử */
+  text-align: center; /* Căn giữa chữ trong phần tử */
+  line-height: 50px; /* Đặt chiều cao của dòng chữ bằng chiều cao của phần tử */
+  left: 100px;
+  top: 100px;
+}
 
-        .logo1 {
-            position: absolute;
-            top: 500px; /* Vị trí ban đầu của biểu tượng, bạn có thể điều chỉnh giá trị này */
-            left: 600px; /* Vị trí ban đầu của biểu tượng, bạn có thể điều chỉnh giá trị này */
-            transition: top 0.5s, left 0.5s, transform 0.5s; /* Thêm hiệu ứng chuyển động và thay đổi kích thước */
-        }
+/* Định nghĩa kiểu cho nút dịch chuyển */
+.button {
+  display: inline-block; /* Hiển thị các nút liền nhau */
+  margin: 10px; /* Khoảng cách giữa các nút */
+  padding: 10px; /* Khoảng đệm bên trong các nút */
+  background-color: blue; /* Màu nền của các nút */
+  color: white; /* Màu chữ của các nút */
+  cursor: pointer; /* Đổi con trỏ chuột thành hình bàn tay khi di chuyển qua các nút */
+}
 
-        .logo1 img {
-            width: 50px; /* Kích thước ban đầu của biểu tượng, bạn có thể điều chỉnh giá trị này */
-            height: auto; /* Đảm bảo tỷ lệ khung hình được giữ nguyên */
-        }
-    </style>
+/* Định nghĩa hàm JavaScript để dịch chuyển phần tử admin */
+<script>
+// Lấy phần tử admin bằng id
+var admin = document.getElementById("admin");
+
+// Định nghĩa các hàm để dịch chuyển phần tử admin lên, xuống, trái, phải
+function moveUp() {
+  // Lấy vị trí hiện tại của phần tử admin theo chiều dọc
+  var top = parseInt(admin.style.top) || 0;
+  // Giảm vị trí của phần tử admin theo chiều dọc đi 10px
+  top -= 10;
+  // Cập nhật vị trí mới của phần tử admin theo chiều dọc
+  admin.style.top = top + "px";
+}
+
+function moveDown() {
+  // Lấy vị trí hiện tại của phần tử admin theo chiều dọc
+  var top = parseInt(admin.style.top) || 0;
+  // Tăng vị trí của phần tử admin theo chiều dọc lên 10px
+  top += 10;
+  // Cập nhật vị trí mới của phần tử admin theo chiều dọc
+  admin.style.top = top + "px";
+}
+
+function moveLeft() {
+  // Lấy vị trí hiện tại của phần tử admin theo chiều ngang
+  var left = parseInt(admin.style.left) || 0;
+  // Giảm vị trí của phần tử admin theo chiều ngang đi 10px
+  left -= 10;
+  // Cập nhật vị trí mới của phần tử admin theo chiều ngang
+  admin.style.left = left + "px";
+}
+
+function moveRight() {
+  // Lấy vị trí hiện tại của phần tử admin theo chiều ngang
+  var left = parseInt(admin.style.left) || 0;
+  // Tăng vị trí của phần tử admin theo chiều ngang lên 10px
+  left += 10;
+  // Cập nhật vị trí mới của phần tử admin theo chiều ngang
+  admin.style.left = left + "px";
+}
+</script>
+</style>
 </head>
 <body>
-<nav id="navbar">
-    <div class="logo1" onclick="moveIcon()">
-        <a href="index1.html"><img src="file:///C:/Users/Dang%20Duong%20PC/Downloads/admin.png" alt="logo1"></a>
-    </div>
-</nav>
-
-<script>
-    function moveIcon() {
-        var logo = document.querySelector('.logo1');
-        var currentTop = parseFloat(getComputedStyle(logo).top);
-        var currentLeft = parseFloat(getComputedStyle(logo).left);
-
-        // Thay đổi vị trí của biểu tượng
-        logo.style.top = (currentTop + 10) + 'px'; // Bạn có thể điều chỉnh giá trị 10 thành giá trị mong muốn
-        logo.style.left = (currentLeft + 10) + 'px'; // Bạn có thể điều chỉnh giá trị 10 thành giá trị mong muốn
-
-        // Thay đổi kích thước của biểu tượng
-        var currentWidth = parseFloat(getComputedStyle(logo.querySelector('img')).width);
-        logo.querySelector('img').style.width = (currentWidth + 10) + 'px'; // Bạn có thể điều chỉnh giá trị 10 thành giá trị mong muốn
-    }
-</script>
-
+<!-- Tạo phần tử admin với id là admin -->
+<div id="admin">Admin</div>
+<!-- Tạo các nút để dịch chuyển phần tử admin và gán sự kiện onclick cho các nút -->
+<button class="button" onclick="moveUp()">Lên</button>
+<button class="button" onclick="moveDown()">Xuống</button>
+<button class="button" onclick="moveLeft()">Trái</button>
+<button class="button" onclick="moveRight()">Phải</button>
 </body>
 </html>

@@ -27,7 +27,22 @@
             width: 50px; /* Kích thước ban đầu của biểu tượng, bạn có thể điều chỉnh giá trị này */
             height: auto; /* Đảm bảo tỷ lệ khung hình được giữ nguyên */
         }
-    </style>
+            #navbar1 {
+                position: relative;
+            }
+        
+            .logo1 {
+                position: absolute;
+                top: -200px; /* Vị trí ban đầu của biểu tượng */
+                left: 800px; /* Vị trí ban đầu của biểu tượng */
+                transition: top 0.5s, left 0.5s, transform 0.5s; /* Thêm hiệu ứng chuyển động và thay đổi kích thước */
+            }
+        
+            .logo1 img {
+                width: 50px; /* Kích thước ban đầu của biểu tượng */
+                height: auto; /* Đảm bảo tỷ lệ khung hình được giữ nguyên */
+            }
+        </style>
 </head>
 <body>
     <div class="header" id="home">
@@ -35,7 +50,16 @@
         <div class="logo">
             <a href="index1.html"><img src="file:///C:/Users/Dang%20Duong%20PC/Downloads/logo.jpg" alt="logo"></a>
         </div>
-        </nav>  
+        </nav> 
+        <div class="header" id = "home">
+            <nav id="navbar1">
+                <div class="logo1">
+                    <a href="index1.html"><img src="file:///C:/Users/Dang%20Duong%20PC/Downloads/admin.png" alt="logo1"></a>
+                </div>
+            </nav>
+        </div>
+        <style>
+        </style> 
         <h1>HỌC VIỆN NÔNG NGHIỆP VIỆT NAM</h1>
         <h1>Đoàn Thanh niên Khoa Công nghệ thông tin</h1>
         <div class="links" id="nav">
@@ -46,13 +70,7 @@
             <a href="lienhe.html">Liên hệ</a>
             <a href="#"><a href="login.html">Login</a></a>
         </div>
-
-    <div>
-    <nav id ="navbar">
-        <div class="logo1">
-            <a href="index1.html"><img src="file:///C:/Users/Dang%20Duong%20PC/Downloads/admin.png" alt="logo1"></a>
-        </div>
-    </nav>
+        </body>
 </div>
 <style>
     h2, p, h3 {
@@ -69,6 +87,23 @@
     h3 {
         margin-bottom: 10px;
     }
+    h4{
+       position: absolute;
+        top: 22px;
+        left:760px;
+        transform: translate(10%,1900%);
+        text-decoration: none;
+        z-index: 2;
+    }
+    h5{
+        position: relative;
+        top: 100px;
+        left: -900px;
+        transform: translate(90%,1900%);
+        text-decoration: none;
+        z-index: 4;
+
+    }
 </style>
 </head>
 <body>
@@ -76,6 +111,8 @@
 <p>Số điện thoại: +84123456789</p>
 <p>Email: doanthanhniencntt.vnua@gmail.com</p>
 <h3>Hoặc inbox tại đây</h3>
+<h4>Admin</h4>
+<h5>Nhập nội dung</h5>
 </body>
 </html>
 </head>
@@ -102,6 +139,7 @@
       transform: translate(-50%, -50%);
       /* Làm tròn góc của phần tử */
       border-radius: 10px 10px 0 0; /* Số px có thể điều chỉnh để thay đổi độ cong của góc */
+      z-index: 1;
     }
   </style>
   <!-- Tạo một thẻ div có class là square -->
@@ -172,6 +210,7 @@
       transform: translate(-50%, -50%);
       /* Thiết lập bán kính cho các góc là 10px */
       border-radius: 10px;
+      z-index: 3;
     }
   
     <style>
