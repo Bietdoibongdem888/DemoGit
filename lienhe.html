@@ -27,37 +27,70 @@
             width: 50px; /* Kích thước ban đầu của biểu tượng, bạn có thể điều chỉnh giá trị này */
             height: auto; /* Đảm bảo tỷ lệ khung hình được giữ nguyên */
         }
-            #navbar1 {
-                position: relative;
-            }
-        
-            .logo1 {
-                position: absolute;
-                top: -200px; /* Vị trí ban đầu của biểu tượng */
-                left: 800px; /* Vị trí ban đầu của biểu tượng */
-                transition: top 0.5s, left 0.5s, transform 0.5s; /* Thêm hiệu ứng chuyển động và thay đổi kích thước */
-            }
-        
-            .logo1 img {
-                width: 50px; /* Kích thước ban đầu của biểu tượng */
-                height: auto; /* Đảm bảo tỷ lệ khung hình được giữ nguyên */
-            }
+        .header {
+  position: relative;
+}
+#movingImage {
+  position: absolute;
+  top: 240px;
+  left: 590px;
+  transition: all 0.5s ease; /* Thêm hiệu ứng chuyển động */
+  width: 300px;
+  height: 300px;
+  z-index: 2;
+  background-size: cover;
+  background-position: center;
+}
+        .header1{
+            position: relative;
+        }
+        #movingImage1 {
+  position: absolute;
+  top: 466px;
+  left: 830px;
+  transition: all 0.5s ease; /* Thêm hiệu ứng chuyển động */
+  width: 700px;
+  height: 700px;
+  z-index: 2;
+  background-size: cover;
+  background-position: center;
+}
+.header2{
+    position: relative;
+}
+#movingImage2 {
+  position: absolute;
+  top: 445px;
+  left: 420px;
+  transition: all 0.5s ease; /* Thêm hiệu ứng chuyển động */
+  width: 800px;
+  height: 800px;
+  z-index: 2;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
         </style>
+        
 </head>
+<div class="header2" id="home">
+    <img src="file:///C:/Users/Dang%20Duong%20PC/Pictures/1222222.png" alt="Moving Image" id="movingImage2">
+  </div>
+<div class="header1" id="home">
+    <img src="file:///C:/Users/Dang%20Duong%20PC/Pictures/12312312.png" alt="Moving Image" id="movingImage1">
+  </div>
 <body>
+    <div class="header" id="home">
+        <img src="file:///C:/Users/Dang%20Duong%20PC/Downloads/222222222.png" alt="Moving Image" id="movingImage">
+      </div>
     <div class="header" id="home">
         <nav id="navbar">
         <div class="logo">
             <a href="index1.html"><img src="file:///C:/Users/Dang%20Duong%20PC/Downloads/logo.jpg" alt="logo"></a>
         </div>
         </nav> 
-        <div class="header" id = "home">
-            <nav id="navbar1">
-                <div class="logo1">
-                    <a href="index1.html"><img src="file:///C:/Users/Dang%20Duong%20PC/Downloads/admin.png" alt="logo1"></a>
-                </div>
-            </nav>
-        </div>
         <style>
         </style> 
         <h1>HỌC VIỆN NÔNG NGHIỆP VIỆT NAM</h1>
@@ -93,7 +126,7 @@
         left:760px;
         transform: translate(10%,1900%);
         text-decoration: none;
-        z-index: 2;
+        z-index: 3;
     }
     h5{
         position: relative;
@@ -101,7 +134,7 @@
         left: -900px;
         transform: translate(90%,1900%);
         text-decoration: none;
-        z-index: 4;
+        z-index: 5;
 
     }
 </style>
@@ -157,9 +190,9 @@
       /* Thiết lập vị trí là tuyệt đối */
       position: absolute;
       /* Thiết lập căn chỉnh ngang là giữa */
-      left: 36.7%;
+      left: 36.51%;
       /* Thiết lập căn chỉnh dọc là giữa */
-      top: 44%;
+      top:44%;
     }
   </style>
   <!-- Tạo một thẻ div có class là bar -->
@@ -210,7 +243,7 @@
       transform: translate(-50%, -50%);
       /* Thiết lập bán kính cho các góc là 10px */
       border-radius: 10px;
-      z-index: 3;
+      z-index: 4;
     }
   
     <style>
