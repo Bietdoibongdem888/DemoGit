@@ -1,80 +1,11 @@
-<html>
-<head>
+<div class="line"></div>
 <style>
-/* Định nghĩa kiểu cho phần tử admin */
-.admin {
-  position: relative; /* Cho phép dịch chuyển phần tử theo vị trí tương đối */
-  width: 100px; /* Chiều rộng của phần tử */
-  height: 50px; /* Chiều cao của phần tử */
-  background-color: grey; /* Màu nền của phần tử */
-  color: white; /* Màu chữ của phần tử */
-  text-align: center; /* Căn giữa chữ trong phần tử */
-  line-height: 50px; /* Đặt chiều cao của dòng chữ bằng chiều cao của phần tử */
-  left: 100px;
-  top: 100px;
-}
-
-/* Định nghĩa kiểu cho nút dịch chuyển */
-.button {
-  display: inline-block; /* Hiển thị các nút liền nhau */
-  margin: 10px; /* Khoảng cách giữa các nút */
-  padding: 10px; /* Khoảng đệm bên trong các nút */
-  background-color: blue; /* Màu nền của các nút */
-  color: white; /* Màu chữ của các nút */
-  cursor: pointer; /* Đổi con trỏ chuột thành hình bàn tay khi di chuyển qua các nút */
-}
-
-/* Định nghĩa hàm JavaScript để dịch chuyển phần tử admin */
-<script>
-// Lấy phần tử admin bằng id
-var admin = document.getElementById("admin");
-
-// Định nghĩa các hàm để dịch chuyển phần tử admin lên, xuống, trái, phải
-function moveUp() {
-  // Lấy vị trí hiện tại của phần tử admin theo chiều dọc
-  var top = parseInt(admin.style.top) || 0;
-  // Giảm vị trí của phần tử admin theo chiều dọc đi 10px
-  top -= 10;
-  // Cập nhật vị trí mới của phần tử admin theo chiều dọc
-  admin.style.top = top + "px";
-}
-
-function moveDown() {
-  // Lấy vị trí hiện tại của phần tử admin theo chiều dọc
-  var top = parseInt(admin.style.top) || 0;
-  // Tăng vị trí của phần tử admin theo chiều dọc lên 10px
-  top += 10;
-  // Cập nhật vị trí mới của phần tử admin theo chiều dọc
-  admin.style.top = top + "px";
-}
-
-function moveLeft() {
-  // Lấy vị trí hiện tại của phần tử admin theo chiều ngang
-  var left = parseInt(admin.style.left) || 0;
-  // Giảm vị trí của phần tử admin theo chiều ngang đi 10px
-  left -= 10;
-  // Cập nhật vị trí mới của phần tử admin theo chiều ngang
-  admin.style.left = left + "px";
-}
-
-function moveRight() {
-  // Lấy vị trí hiện tại của phần tử admin theo chiều ngang
-  var left = parseInt(admin.style.left) || 0;
-  // Tăng vị trí của phần tử admin theo chiều ngang lên 10px
-  left += 10;
-  // Cập nhật vị trí mới của phần tử admin theo chiều ngang
-  admin.style.left = left + "px";
-}
-</script>
+    .line{
+      position: relative;
+      top: 500px; /* Di chuyển đường thẳng xuống phía dưới */
+      left: 450px; /* Di chuyển đường thẳng sang bên phải */
+      width: 50%;
+      height: 1px; /* Độ dày của đường thẳng */
+      background-color: black; /* Màu của đường thẳng */
+    }
 </style>
-</head>
-<body>
-<!-- Tạo phần tử admin với id là admin -->
-<div id="admin">Admin</div>
-<!-- Tạo các nút để dịch chuyển phần tử admin và gán sự kiện onclick cho các nút -->
-<button class="button" onclick="moveUp()">Lên</button>
-<button class="button" onclick="moveDown()">Xuống</button>
-<button class="button" onclick="moveLeft()">Trái</button>
-<button class="button" onclick="moveRight()">Phải</button>
-</body>
-</html>
